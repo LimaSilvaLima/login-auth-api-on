@@ -9,7 +9,9 @@ public class LoginAuthApiApplication {
 
 	public static void main(String[] args) {
 		Dotenv.configure().systemProperties().load();
+		
 		SpringApplication.run(LoginAuthApiApplication.class, args);
 	}
+	
 
 }
