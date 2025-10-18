@@ -4,6 +4,7 @@ import java.util.Optional;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.bind.annotation.RequestBody; // Garante o import correto
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,8 +16,6 @@ import com.login_auth_api.dto.ResponseDTO;
 import com.login_auth_api.infra.security.TokenService;
 import com.login_auth_api.repositories.UserRepository;
 
-
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
 import lombok.RequiredArgsConstructor;
 
 @RestController
@@ -32,15 +31,16 @@ public class AuthController {
     public ResponseEntity login(@RequestBody LoginRequestDTO body) {
         User user = this.userRepository.findByEmail(body.email())
                 .orElseThrow(() -> new RuntimeException("User not found"));
-                if (passwordEncoder.matches(user.getPassword(), body.password())) {
+                if (passwordEncoder.matches(body.password(), user.getPassword())) {
                     String token = this.tokenService.generateToken(user);
                     return ResponseEntity.ok(new ResponseDTO(user.getName(), token));
                 } 
                 return ResponseEntity.badRequest().build();
     }
 
-    @PostMapping("/resgister")
-    public ResponseEntity resgister(@RequestBody RegisterRequestDTO body) {
+
+    @PostMapping("/register")
+    public ResponseEntity register(@RequestBody RegisterRequestDTO body) {
         Optional< User> user
          = this.userRepository.findByEmail(body.email());
         
@@ -56,7 +56,7 @@ public class AuthController {
         } else {
             return ResponseEntity.badRequest().build();
         }
-        
+
     }
 
 

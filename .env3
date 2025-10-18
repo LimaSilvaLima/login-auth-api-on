@@ -1,3 +1,7 @@
 DATABASE_URL=jdbc:postgresql://localhost:5432/neondb
 DB_USERNAME=postgres
 DB_PASSWORD=123456
+
+
+#"name": "SilvaLima",
+#    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJsb2dpbi1hdXRoLWFwaSIsInN1YiI6ImxpbWFzaWx2YWxpbWFAaG90bWFpbC5jb20iLCJleHAiOjE3NjA4MzYwNDN9.nhgYnqGdORwLAZsi_iaZpEPe8Gha77sVSjJ8auet7cU"
