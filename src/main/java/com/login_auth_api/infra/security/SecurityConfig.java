@@ -35,7 +35,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers("/auth/login").permitAll()
                         .requestMatchers("/auth/register").permitAll()
-                        .requestMatchers("/swagger-ui.html/**", "/v2/api-docs/**",  "/v3/api-docs/**",  "/swagger-resources/**", "/webjars/**").permitAll() // Adiciona rotas do Swagger aqui
+                        .requestMatchers("/swagger-ui/**", "/v2/api-docs",  "/v3/api-docs/**",  "/swagger-resources/**", "/webjars/**").permitAll()
                         .anyRequest().authenticated())
                 .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
