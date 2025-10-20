@@ -3,5 +3,14 @@ DB_USERNAME=postgres
 DB_PASSWORD=123456
 
 
-#"name": "SilvaLima",
-#    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJsb2dpbi1hdXRoLWFwaSIsInN1YiI6ImxpbWFzaWx2YWxpbWFAaG90bWFpbC5jb20iLCJleHAiOjE3NjA4MzYwNDN9.nhgYnqGdORwLAZsi_iaZpEPe8Gha77sVSjJ8auet7cU"
+#"name": "silvalima",
+# "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJsb2dpbi1hdXRoLWFwaSIsInN1YiI6ImxpbWFzaWx2YWxpbWFAaG90bWFpbC5jb20iLCJleHAiOjE3NjA5NzY5NjJ9.BNdH3kzk4jBsMyOS-OSLJTaJo0TFewi2uCrsLOvAazo"
+#"limasilvalimahotmail.com"
+
+
+
+#
+#   "name": "joselimaa",
+#  "email": "jose.lima03@aluno.unifametro.edu.br",
+#    "password": "123456789"
+
