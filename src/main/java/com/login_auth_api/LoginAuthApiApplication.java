@@ -8,10 +8,11 @@ import io.github.cdimascio.dotenv.Dotenv;
 public class LoginAuthApiApplication {
 
 	public static void main(String[] args) {
-		Dotenv dotenv = Dotenv.configure()
+		Dotenv.configure()
                 .directory("./") // Garante que ele procure o .env na raiz do projeto
                 .ignoreIfMissing() // Não falha se o arquivo .env não existir
-                .load();
+				.systemProperties() // Carrega as variáveis do .env nas propriedades do sistema
+                .load(); // Efetivamente carrega as variáveis
 		SpringApplication.run(LoginAuthApiApplication.class, args);
 	}
 	
